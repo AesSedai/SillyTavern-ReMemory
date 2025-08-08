@@ -276,10 +276,15 @@ async function generateKeywords(content) {
 
 	infoToast("Generating keywords....");
 	const prompt_text = settings.keywords_prompt_template.replace('{{content}}', content.trim());
+	console.log("pt", prompt_text);
 	let result = await runSwappableGen(prompt_text, ["\n"]);
+	console.log("result", result);
 	const parsed_result = getContext().parseReasoningFromString(result);
+	console.log("parsed_result", parsed_result);
 	if (parsed_result) result = parsed_result.content;
+	console.log("content", result);
 	result = result.split(',').map((it) => it.trim());
+	console.log("split", result);
 	if (!settings.allow_names) {
 		const names = getAllNames();
 		result = result.filter((it)=>!names.includes(it));
