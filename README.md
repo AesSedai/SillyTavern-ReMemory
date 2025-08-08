@@ -21,7 +21,7 @@ These pop-up memories can optionally fade over time, becoming less likely to tri
 
 ## Installation
 
-Install like any other SillyTavern extension, with the Github link: `https://github.com/InspectorCaracal/SillyTavern-ReMemory`
+Install like any other SillyTavern extension, with the Github link: `https://github.com/AesSedai/SillyTavern-ReMemory`
 
 ## Features
 
